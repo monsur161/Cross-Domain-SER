@@ -43,5 +43,5 @@ This repository contains the Jupyter notebooks used to conduct the research. To 
 
 ### 2. Clone the Repository
 ```bash
-git clone [https://github.com/monsur761/Cross-Domain-Speech-Emotion-Recognition.git](https://github.com/monsur761/Cross-Domain-Speech-Emotion-Recognition.git)
-cd Cross-Domain-Speech-Emotion-Recognition
+git clone https://github.com/monsur161/Cross-Domain-SER.git
+cd Cross-Domain-SER
