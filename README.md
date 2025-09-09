@@ -21,6 +21,7 @@ This project is documented in a series of Jupyter notebooks, each corresponding 
 * **[Phase 4.3: First Generalist Model](./notebooks/04_Generalist_Model_v1_Bridging_the_Gap.ipynb):** Solves the domain gap by training a ResNet18 model on a combined RAVDESS and CREMA-D dataset.
 * **[Phase 4.5: The Ultimate Generalist Model](./notebooks/05_Ultimate_Generalist_Model_v2.ipynb):** Achieves peak performance by introducing data balancing, SpecAugment, and an advanced learning rate scheduler.
 * **[Phase 4.6: Unbalanced Data Control Experiment](./notebooks/06_Generalist_Ablation_Unbalanced_Data.ipynb):** An ablation study proving the critical importance of the data balancing strategy.
+* **[Phase 4.7: EfficientNet Control Experiment](./notebooks/07_Generalist_Ablation_EfficientNet.ipynb):** A final test to confirm the performance ceiling of the CNN approach, showing that a more advanced architecture does not yield significant gains.
 
 ## Setup and Usage
 [Content to be added here: Instructions on how to set up the environment using requirements.txt and run the code.]
