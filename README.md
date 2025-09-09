@@ -1,0 +1,21 @@
+# A Comparative Study of CNN and Transformer Models for Cross-Domain Speech Emotion Recognition
+
+## Project Summary
+[This project conducts an end-to-end investigation into the problem of domain generalization in Speech Emotion Recognition (SER). We begin by establishing a baseline "Specialist" model using a CNN on the RAVDESS dataset, demonstrating its high performance in-domain and its failure to generalize to the CREMA-D dataset. We then develop a series of "Generalist" models, culminating in a highly-optimized CNN that successfully bridges the domain gap. Finally, we compare our champion CNN against a state-of-the-art HuBERT Speech Transformer, leading to a surprising conclusion about the effectiveness of different architectural paradigms for this task.]
+
+## Key Results
+This table summarizes the performance of the most significant models developed in this study.
+
+| Model | Architecture | Data Strategy | RAVDESS Accuracy | CREMA-D Accuracy |
+| :--- | :--- | :--- | :--- | :--- |
+| **Specialist (L2)** | ResNet18 | RAVDESS Only | 80.56% | 22.39% |
+| **Champion CNN (L4.5)**| ResNet18 | **Balanced** | **99.73%** | **62.71%** |
+| **Transformer (L4.9)**| HuBERT | Multi-Stage | 45.86% | 44.71% |
+
+## Repository Structure
+This project is documented in a series of Jupyter notebooks, each corresponding to a key phase of the research.
+
+* **[Phase 1: Specialist Model Baseline](./notebooks/01_Specialist_Model_Baseline.ipynb):** Establishes a baseline by training a ResNet18 model on the clean RAVDESS dataset.
+
+## Setup and Usage
+[Content to be added here: Instructions on how to set up the environment using requirements.txt and run the code.]
