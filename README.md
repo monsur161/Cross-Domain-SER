@@ -18,6 +18,7 @@ This project is documented in a series of Jupyter notebooks, each corresponding 
 * **[Phase 1: Specialist Model Baseline](./notebooks/01_Specialist_Model_Baseline.ipynb):** Establishes a baseline by training a ResNet18 model on the clean RAVDESS dataset.
 * **[Phase 2: Domain Gap and Initial Solutions](./notebooks/02_Domain_Gap_and_Initial_Solutions.ipynb):** Creates a more robust Specialist, quantifies the performance drop on the CREMA-D dataset, and tests Knowledge Distillation.
 * **[Phase 3: Specialist Model Bias Analysis](./notebooks/03_Specialist_Model_Bias_Analysis.ipynb):** A fairness audit of the Specialist Model, revealing different error patterns for male and female speakers.
+* **[Phase 4.3: First Generalist Model](./notebooks/04_Generalist_Model_v1_Bridging_the_Gap.ipynb):** Solves the domain gap by training a ResNet18 model on a combined RAVDESS and CREMA-D dataset.
 
 ## Setup and Usage
 [Content to be added here: Instructions on how to set up the environment using requirements.txt and run the code.]
