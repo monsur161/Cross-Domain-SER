@@ -16,6 +16,7 @@ This table summarizes the performance of the most significant models developed i
 This project is documented in a series of Jupyter notebooks, each corresponding to a key phase of the research.
 
 * **[Phase 1: Specialist Model Baseline](./notebooks/01_Specialist_Model_Baseline.ipynb):** Establishes a baseline by training a ResNet18 model on the clean RAVDESS dataset.
+* **[Phase 2: Domain Gap and Initial Solutions](./notebooks/02_Domain_Gap_and_Initial_Solutions.ipynb):** Creates a more robust Specialist, quantifies the performance drop on the CREMA-D dataset, and tests Knowledge Distillation.
 
 ## Setup and Usage
 [Content to be added here: Instructions on how to set up the environment using requirements.txt and run the code.]
