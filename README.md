@@ -1,7 +1,7 @@
 # A Comparative Study of CNN and Transformer Models for Cross-Domain Speech Emotion Recognition
 
 ## Project Summary
-[This project conducts an end-to-end investigation into the problem of domain generalization in Speech Emotion Recognition (SER). We begin by establishing a baseline "Specialist" model using a CNN on the RAVDESS dataset, demonstrating its high performance in-domain and its failure to generalize to the CREMA-D dataset. We then develop a series of "Generalist" models, culminating in a highly-optimized CNN that successfully bridges the domain gap. Finally, we compare our champion CNN against a state-of-the-art HuBERT Speech Transformer, leading to a surprising conclusion about the effectiveness of different architectural paradigms for this task.]
+This project conducts an end-to-end investigation into the problem of domain generalization in Speech Emotion Recognition (SER). We begin by establishing a baseline "Specialist" model using a CNN on the RAVDESS dataset, demonstrating its high performance in-domain and its failure to generalize to the CREMA-D dataset. We then develop a series of "Generalist" models, culminating in a highly-optimized CNN that successfully bridges the domain gap. Finally, we compare our champion CNN against a state-of-the-art HuBERT Speech Transformer, leading to a surprising conclusion about the effectiveness of different architectural paradigms for this task.
 
 ## Key Results
 This table summarizes the performance of the most significant models developed in this study.
