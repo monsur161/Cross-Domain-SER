@@ -1,16 +1,25 @@
 # A Comparative Study of CNN and Transformer Models for Cross-Domain Speech Emotion Recognition
 
 ## Project Summary
-This project conducts an end-to-end investigation into the problem of domain generalization in Speech Emotion Recognition (SER). We begin by establishing a baseline "Specialist" model using a CNN on the RAVDESS dataset, demonstrating its high performance in-domain and its failure to generalize to the CREMA-D dataset. We then develop a series of "Generalist" models, culminating in a highly-optimized CNN that successfully bridges the domain gap. Finally, we compare our champion CNN against a state-of-the-art HuBERT Speech Transformer, leading to a surprising conclusion about the effectiveness of different architectural paradigms for this task.
+This project conducts an end-to-end investigation into the problem of domain generalization in Speech Emotion Recognition (SER).
+
+The research followed a systematic, multi-stage process:
+1. A **"Specialist" model** using a ResNet18 CNN on spectrograms was first developed, achieving high in-domain accuracy but failing catastrophically when tested on a different domain, thereby quantifying the "domain gap."
+2. A **"Generalist" CNN model** was then created by training on a mixed-domain dataset. This approach was progressively enhanced with advanced techniques, culminating in our champion **"Ultimate Generalist"** which used a **balanced dataset** and **SpecAugment**, demonstrating near-perfect accuracy on the clean domain and strong generalization to the challenging domain.
+3. Finally, this highly-optimized CNN approach was benchmarked against a state-of-the-art **HuBERT Speech Transformer**. This final experiment yielded a surprising and insightful conclusion: the curriculum learning strategy used for the Transformer led to catastrophic forgetting, making our **robustly-trained CNN model the superior solution** for this specific cross-domain task.
 
 ## Key Results
-This table summarizes the performance of the most significant models developed in this study.
+This table summarizes the performance of the most significant models developed in this study, showcasing the journey from a brittle specialist to a robust generalist and the final comparison with a Speech Transformer.
 
-| Model | Architecture | Data Strategy | RAVDESS Accuracy | CREMA-D Accuracy |
-| :--- | :--- | :--- | :--- | :--- |
-| **Specialist (L2)** | ResNet18 | RAVDESS Only | 80.56% | 22.39% |
-| **Champion CNN (L4.5)**| ResNet18 | **Balanced** | **99.73%** | **62.71%** |
-| **Transformer (L4.9)**| HuBERT | Multi-Stage | 45.86% | 44.71% |
+| Model Stage | Architecture | Data Strategy | RAVDESS Accuracy | CREMA-D Accuracy | IEMOCAP Accuracy |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Specialist (L2)** | ResNet18 | RAVDESS Only | 80.56% | 22.39% | (N/A) |
+| **Champion CNN (L4.5)** | **ResNet18** | **Balanced (R+C)** | **99.73%** | **62.71%** | (N/A) |
+| **Transformer (L4.9)**| HuBERT | Multi-Stage (R+C -> I) | 45.86% | 44.71% | **66.60%** |
+
+*(R=RAVDESS, C=CREMA-D, I=IEMOCAP)*
+
+The key takeaway is the performance of our **Champion CNN (L4.5)**, which nearly perfected the clean RAVDESS dataset while simultaneously increasing the accuracy on the challenging CREMA-D dataset by over 40 percentage points compared to the Specialist baseline.
 
 ## Repository Structure
 This project is documented in a series of Jupyter notebooks, each corresponding to a key phase of the research.
@@ -26,4 +35,13 @@ This project is documented in a series of Jupyter notebooks, each corresponding 
 * **[Phase 4.9: The Final HuBERT Experiment](./notebooks/09_Transformer_v2_HuBERT_Final_Experiment.ipynb):** Successfully implements and trains the HuBERT model, providing the final, conclusive results and comparison for the project.
 
 ## Setup and Usage
-[Content to be added here: Instructions on how to set up the environment using requirements.txt and run the code.]
+This repository contains the Jupyter notebooks used to conduct the research. To reproduce the results, please follow these steps.
+
+### 1. Prerequisites
+* A system with a CUDA-enabled GPU is highly recommended for training the models in a reasonable amount of time.
+* Python 3.10+
+
+### 2. Clone the Repository
+```bash
+git clone [https://github.com/monsur761/Cross-Domain-Speech-Emotion-Recognition.git](https://github.com/monsur761/Cross-Domain-Speech-Emotion-Recognition.git)
+cd Cross-Domain-Speech-Emotion-Recognition
