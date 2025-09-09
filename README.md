@@ -23,6 +23,7 @@ This project is documented in a series of Jupyter notebooks, each corresponding 
 * **[Phase 4.6: Unbalanced Data Control Experiment](./notebooks/06_Generalist_Ablation_Unbalanced_Data.ipynb):** An ablation study proving the critical importance of the data balancing strategy.
 * **[Phase 4.7: EfficientNet Control Experiment](./notebooks/07_Generalist_Ablation_EfficientNet.ipynb):** A final test to confirm the performance ceiling of the CNN approach, showing that a more advanced architecture does not yield significant gains.
 * **[Phase 4.8: The Transformer Paradigm Shift (Failed Attempt)](./notebooks/08_Transformer_v1_Wav2Vec2_Failed_Attempt.ipynb):** Documents the first attempt to use an end-to-end Speech Transformer, which failed due to training instability (`NaN` loss).
+* **[Phase 4.9: The Final HuBERT Experiment](./notebooks/09_Transformer_v2_HuBERT_Final_Experiment.ipynb):** Successfully implements and trains the HuBERT model, providing the final, conclusive results and comparison for the project.
 
 ## Setup and Usage
 [Content to be added here: Instructions on how to set up the environment using requirements.txt and run the code.]
